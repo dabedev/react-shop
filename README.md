@@ -10,6 +10,8 @@ To install the project dependencies, use:
 npm ci
 ```
 
+**Note:** Running this command will install the serve NPM module locally. If you prefer not to include this module in your project, you can remove it from the package.json file before running the installation command.
+
 ## Development
 
 To start the project in development mode, use:
