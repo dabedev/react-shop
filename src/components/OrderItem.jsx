@@ -13,7 +13,7 @@ const OrderItem = (props) => {
 	return (
 		<div className="OrderItem">
 			<figure>
-				<img src={product.images[0]} alt="bike" />
+				<img src={product.images[0]} />
 			</figure>
 			<p>{product.title}</p>
 			<p>${product.price}</p>

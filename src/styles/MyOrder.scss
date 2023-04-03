@@ -5,12 +5,15 @@
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
-	right: 0;
+	right: -360px;
 	background-color: white;
 	top: 60px;
-	bottom: 0px;
+	bottom: 0;
 	border-radius: 6px;
-	border: 1px solid var(--very-light-pink)
+	border: 1px solid var(--very-light-pink);
+	position: fixed;
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
 }
 .my-order-list {
 	max-height: calc(100vh - 40vh);
@@ -65,4 +68,7 @@
 	.MyOrder {
 		width: 100%;
 	}
+}
+@keyframes swipeLeft {
+	100% {transform: translateX(-360px);}
 }

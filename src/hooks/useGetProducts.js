@@ -5,8 +5,15 @@ const useGetProducts = (api, limit, offset) => {
     const [products, setProducts] = useState([]);
 
     useEffect(async () => {
-        const response = await axios(api);
+        const controller = new AbortController();
+        const signal = controller.signal;
+
+        const response = await axios(api, { signal });
         setProducts(response.data);
+
+        return () => {
+            controller.abort();
+        }
     }, [])
 
     return products;

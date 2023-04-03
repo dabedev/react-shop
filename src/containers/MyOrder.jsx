@@ -5,12 +5,12 @@ import '@styles/MyOrder.scss';
 
 import arrowSign from '@icons/flechita.svg';
 
-const MyOrder = () => {
+const MyOrder = ({ setToggleOrders }) => {
 	const { initialState, cartTotal } = useContext(AppContext);
 	return (
 		<aside className="MyOrder">
 			<div className="title-container">
-				<img src={arrowSign} alt="arrow" />
+				<img src={arrowSign} alt="arrow" onClick={() => setToggleOrders(prevToggleOrders => !prevToggleOrders)} />
 				<p className="title">My order</p>
 			</div>
 			<div className="my-order-content">

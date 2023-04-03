@@ -2,3 +2,7 @@ body {
 	margin: 0;
 	font-family: 'Quicksand', sans-serif;
 }
+
+ul, li, img[alt] {
+	cursor: pointer;
+}
