@@ -25,10 +25,16 @@ This will launch the development server and you can access the application in yo
 To start the project in production mode, use:
 
 ```sh
-npm run build
+npm run build && serve -s dist
 ```
 
 This will launch the production server and you can access the application in your browser at `http://localhost:3000`.
+
+**Note:** To run the application in production mode, you need to install the 'serve' NPM module globally. Alternatively, you can install it locally and start the production server using the following command:
+
+```sh
+npm run build && npx serve -s dist
+```
 
 ## Features
 
